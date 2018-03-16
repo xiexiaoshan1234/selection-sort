@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selection Sort</title>
+</head>
+<body>
+<script>
+    function selection(array){
+        var minnumber,temp;
+        for(var i=0;i<array.length;i++){
+            var minnumber=i;
+            for(var j=i+1;j<array.length;j++){
+                if(array[j]<array[minnumber]){
+                    minnumber=j;
+                }
+            }
+            temp=array[minnumber];
+            array[minnumber]=array[i];
+            array[i]=temp;
+        }
+        return array;
+    }
+    var arrayA=[3,1,5,2,4];
+
+    console.log( selection(arrayA));
+</script>
+</body>
+</html>
